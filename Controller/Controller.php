@@ -5,7 +5,6 @@ namespace CRUD\Controller;
 use CRUD\Helper\PersonHelper;
 use CRUD\Helper\TaskHelper;
 use CRUD\Model\Actions;
-use CRUD\Model\Person;
 use CRUD\Model\Task;
 
 class Controller
@@ -28,9 +27,6 @@ class Controller
             case Actions::DELETE:
                 $this->deleteTaskAction($request);
                 break;
-            case Actions::LOGIN:
-                $this->loginAction($request);
-                break;
             default:
                 break;
         }
@@ -39,7 +35,7 @@ class Controller
     public function createTaskAction($request)
     {
         $task = new task();
-        $task->setId($_POST['id']);
+        // $task->setId($_POST['id']);
         $task->setTitle($_POST['title']);
         $task->setDescription($_POST['description']);
         $task->setStatus($_POST['status']);
@@ -50,7 +46,7 @@ class Controller
     public function updateTaskAction($request)
     {
         $task = new Task();
-        $task->setId($_POST['id']);
+        // $task->setId($_POST['id']);
         $task->setTitle($_POST['title']);
         $task->setDescription($_POST['description']);
         $task->setStatus($_POST['status']);

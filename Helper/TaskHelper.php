@@ -11,7 +11,7 @@ class TaskHelper
         /** @var DBConnector $dbHelper */
         $dbHelper = new DBConnector();
         $dbHelper->connect();
-        $sql = "INSERT INTO task (id, task_title, task_description, task_status) VALUES ('" . $task->getId() . "', '" . $task->getTitle() . "', '" . $task->getDescription() . "', '" . $task->getStatus() . "')";
+        $sql = "INSERT INTO task (id, title, description, status) VALUES (null, '" . $task->getTitle() . "', '" . $task->getDescription() . "', '" . $task->getStatus() . "')";
         if ($dbHelper->execQuery($sql)) {
             echo "Record added successfully";
         } else {

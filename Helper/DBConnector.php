@@ -28,7 +28,7 @@ class DBConnector
 
     public function __construct()
     {
-        $this->db = "task_management";
+        $this->db = "todo";
         $this->username = "root";
         $this->password = "";
     }
